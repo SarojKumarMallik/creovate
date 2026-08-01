@@ -1,0 +1,354 @@
+/* MAIN WRAPPER */
+.premium-wrapper {
+  width: 100%;
+  padding: 15px 25px;
+}
+
+/* ⭐ MAIN PAGE TITLE */
+.main-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e4fa3;
+  letter-spacing: 1px;
+}
+
+/* MAIN CONTAINER */
+.premium-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+}
+
+/* LEFT FORM SECTION */
+.form-section {
+  width: 40%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 85vh;
+}
+
+.form-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.form-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.form-scroll::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 5px;
+}
+
+/* INPUTS */
+.premium-form label {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.premium-form input,
+.premium-form select,
+.premium-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.premium-form input:focus,
+.premium-form select:focus,
+.premium-form textarea:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 4px rgba(25,118,210,0.3);
+}
+
+textarea {
+  min-height: 70px;
+  resize: none;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* BUTTON */
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #0d57a1;
+}
+
+/* RIGHT TABLE SECTION */
+.table-section {
+  width: 60%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-header {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e4fa3;
+}
+
+/* TABLE */
+.table-scroll {
+  flex: 1;
+  overflow-x: auto;
+}
+
+.premium-table {
+  width: max-content;   
+  border-collapse: collapse;
+}
+
+.premium-table th,
+.premium-table td {
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.premium-table th {
+  background: #1976d2;
+  color: #fff;
+}
+
+/* ACTION BUTTONS */
+.edit-btn {
+  padding: 6px 12px;
+  background: #ffa726;
+  border: none;
+  color: white;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background: #e53935;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+
+/* ===== FEATURE LIST ===== */
+/* ================= FEATURE WRAPPER ================= */
+.feature-wrapper {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ================= FEATURE ITEM ================= */
+.feature-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  border: 1px solid #c7d2fe;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.08);
+}
+
+/* Hover Effect */
+.feature-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(99, 102, 241, 0.18);
+  border-color: #6366f1;
+}
+
+/* Check Icon Text */
+.feature-item span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  word-break: break-word;
+}
+
+/* ================= REMOVE BUTTON ================= */
+.feature-item button {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid #fecaca;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Remove Hover */
+.feature-item button:hover {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 640px) {
+  .feature-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .feature-item button {
+    align-self: flex-end;
+  }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= GLOBAL RESPONSIVE IMPROVEMENTS ================= */
+
+/* ----------- Tablet (Below 1024px) ----------- */
+@media (max-width: 1024px) {
+
+  .premium-container {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .table-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .form-section {
+    margin-bottom: 20px;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  .premium-table {
+    width: 100%;
+    min-width: 600px;
+  }
+}
+
+/* ----------- Mobile (Below 768px) ----------- */
+@media (max-width: 768px) {
+
+  .premium-wrapper {
+    padding: 12px;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section,
+  .table-section {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .premium-form input,
+  .premium-form select,
+  .premium-form textarea {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .premium-table th,
+  .premium-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ----------- Small Mobile (Below 480px) ----------- */
+@media (max-width: 480px) {
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .form-section,
+  .table-section {
+    padding: 12px;
+  }
+
+  .premium-table {
+    min-width: 500px;
+  }
+
+  .feature-item {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .feature-item button {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}

@@ -1,0 +1,229 @@
+/* ================= CONTAINER ================= */
+
+.floating-container {
+  position: fixed;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+/* Vertical Stack */
+.floating-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+/* ================= BUTTONS ================= */
+
+.floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 15px;
+  height: 50px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px 0 0 8px;
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+}
+
+/* Button Text (Social Media Name) */
+.btn-text {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Icon */
+.btn-icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect - Expand to show name */
+.floating-btn:hover {
+  width: 160px;
+  padding: 10px 20px;
+  transform: translateX(-5px);
+}
+
+.floating-btn:hover .btn-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.floating-btn:hover .btn-icon {
+  font-size: 24px;
+}
+
+/* WhatsApp */
+.floating-btn.whatsapp {
+  background: #25d366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.floating-btn.whatsapp:hover {
+  background: #20b859;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+/* Call */
+.floating-btn.call {
+  background: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+.floating-btn.call:hover {
+  background: #1e40af;
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.4);
+}
+
+/* Instagram */
+.floating-btn.instagram {
+  background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+  box-shadow: 0 4px 12px rgba(214, 41, 118, 0.3);
+}
+
+.floating-btn.instagram:hover {
+  background: linear-gradient(45deg, #e0862c, #c21e68, #7e24a0);
+  box-shadow: 0 6px 16px rgba(214, 41, 118, 0.4);
+}
+
+/* Facebook */
+.floating-btn.facebook {
+  background: #1877f2;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+.floating-btn.facebook:hover {
+  background: #0f66e0;
+  box-shadow: 0 6px 16px rgba(24, 119, 242, 0.4);
+}
+
+/* LinkedIn */
+.floating-btn.linkedin {
+  background: #0077b5;
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+}
+
+.floating-btn.linkedin:hover {
+  background: #006096;
+  box-shadow: 0 6px 16px rgba(0, 119, 181, 0.4);
+}
+
+/* Email */
+.floating-btn.email {
+  background: #ea4335;
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3);
+}
+
+.floating-btn.email:hover {
+  background: #d3382a;
+  box-shadow: 0 6px 16px rgba(234, 67, 53, 0.4);
+}
+
+/* Telegram */
+.floating-btn.telegram {
+  background: #0088cc;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+
+.floating-btn.telegram:hover {
+  background: #006699;
+  box-shadow: 0 6px 16px rgba(0, 136, 204, 0.4);
+}
+
+/* YouTube */
+.floating-btn.youtube {
+  background: #ff0000;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.floating-btn.youtube:hover {
+  background: #cc0000;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.4);
+}
+
+/* Twitter/X */
+.floating-btn.twitter {
+  background: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn.twitter:hover {
+  background: #1da1f2;
+  box-shadow: 0 6px 16px rgba(29, 161, 242, 0.4);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.floating-btn {
+  animation: slideIn 0.3s ease forwards;
+  animation-delay: calc(var(--order) * 0.05s);
+  opacity: 0;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .floating-btn {
+    width: 45px;
+    height: 45px;
+    padding: 0 12px;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .floating-btn:hover {
+    width: 55px;
+    padding: 0 15px;
+  }
+
+  .floating-stack {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .btn-icon {
+    font-size: 18px;
+  }
+
+  .floating-stack {
+    gap: 6px;
+  }
+}

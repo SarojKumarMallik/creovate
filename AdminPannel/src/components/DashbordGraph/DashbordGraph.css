@@ -1,0 +1,312 @@
+/* ================= GRID LAYOUT ================= */
+
+.admindash-grid-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+  padding: 0px;
+  background: #f4f6fa;
+  min-height: 75vh;
+}
+
+/* ================= CARD ================= */
+
+.admindash-card {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.admindash-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* ================= DROPDOWN ================= */
+
+.admindash-menu-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.admindash-dropdown {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 10px;
+  width: 160px;
+  z-index: 100;
+}
+
+.admindash-dropdown div {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admindash-dropdown div:hover {
+  background: #f3f4f8;
+}
+
+/* ================= SCROLL AREA ================= */
+
+.admindash-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.admindash-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admindash-scroll-area::-webkit-scrollbar-thumb {
+  background: #dcdcdc;
+  border-radius: 10px;
+}
+
+/* ================= TASK CARD ================= */
+
+.admindash-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+/* FILTER BUTTON */
+
+.admindash-filter-btn {
+  position: relative;
+  background: #f3f4f8;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.admindash-filter-dropdown {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 8px;
+  display: none;
+  width: 140px;
+}
+
+.admindash-filter-btn:hover .admindash-filter-dropdown {
+  display: block;
+}
+
+.admindash-filter-dropdown div {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admindash-filter-dropdown div:hover {
+  background: #f3f4f8;
+}
+
+/* ================= TASK ROW ================= */
+
+.admindash-task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.admindash-task-left {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* CHECKBOX */
+
+.admindash-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4f46e5;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+/* TASK TITLE */
+
+.admindash-task-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* TASK BOTTOM */
+
+.admindash-task-bottom {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ================= HORIZONTAL AVATARS (FIXED) ================= */
+
+.admindash-vertical-users {
+  display: flex;
+  align-items: center;
+}
+
+.admindash-vertical-users img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.admindash-vertical-users img:first-child {
+  margin-left: 0;
+}
+
+.admindash-vertical-users img:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+/* +3 BADGE (CIRCULAR) */
+
+.admindash-plus-badge {
+  width: 34px;
+  height: 34px;
+  background: #7C3AED;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
+}
+
+/* DATE */
+
+.admindash-task-date {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 3 DOTS */
+
+.admindash-task-menu {
+  color: #888;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* ================= ACTIVITY CARD ================= */
+
+.admindash-activity-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.admindash-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.admindash-dot.purple { background: #7C3AED; }
+.admindash-dot.orange { background: #F97316; }
+.admindash-dot.green { background: #10B981; }
+.admindash-dot.yellow { background: #FBBF24; }
+.admindash-dot.blue { background: #3B82F6; }
+
+.admindash-activity-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.admindash-activity-content p {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .admindash-grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admindash-card {
+    height: 65vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .admindash-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .admindash-card {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .admindash-grid-wrapper {
+    padding: 15px;
+  }
+
+  .admindash-card {
+    height: auto;
+    min-height: 450px;
+  }
+
+  .admindash-task-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .admindash-activity-top {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

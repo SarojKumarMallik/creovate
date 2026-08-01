@@ -1,0 +1,238 @@
+/* ===== PAGE BACKGROUND ===== */
+.news-admin-layout {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== LEFT FORM CARD ===== */
+.news-admin-form-card {
+  width: 440px;
+  min-width: 340px;
+  background: #fff;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* ===== RIGHT TABLE CARD ===== */
+.news-admin-table-card {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* ===== HEADER ===== */
+.news-admin-header h2 {
+ margin-bottom: 6px;
+ font-size: 24px;
+  
+}
+
+.news-admin-header p {
+  color: #666;
+  margin-bottom: 20px;
+  
+}
+
+/* ===== FORM ===== */
+.news-field-group {
+  margin-bottom: 16px;
+}
+
+.news-field-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.news-field-group input,
+.news-field-group textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.news-field-group input:focus,
+.news-field-group textarea:focus {
+  border-color: #4f6df5;
+}
+
+/* POST BUTTON */
+.news-post-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  background: #4f6df5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.news-thumb {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* ===== PROFESSIONAL TABLE SCROLL WRAPPER ===== */
+.news-table-scroll-wrap {
+  width: 100%;
+  max-width: 100%;
+
+  /* Enable both axis scrolling */
+  overflow-x: auto;
+  overflow-y: auto;
+
+  /* Fixed height for vertical scroll */
+  max-height: 360px;
+
+  /* Smooth & touch friendly */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* Prevent layout breaking */
+  display: block;
+  position: relative;
+
+  /* Nice scrollbar */
+  scrollbar-width: thin;
+}
+
+/* Chrome / Edge / Safari scrollbar */
+.news-table-scroll-wrap::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.news-table-scroll-wrap::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.news-table-scroll-wrap::-webkit-scrollbar-thumb {
+  background: #c5c7cc;
+  border-radius: 10px;
+}
+
+.news-table-scroll-wrap::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6;
+}
+
+/* ===== TABLE ===== */
+.news-live-table {
+  width: max-content;      /* IMPORTANT → allows real horizontal scroll */
+  min-width: 1100px;       /* ensures overflow when many columns */
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* TABLE CELLS */
+.news-live-table th,
+.news-live-table td {
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* HEADER */
+.news-live-table th {
+  background: #4f6df5;
+  color: #fff;
+
+  /* Professional sticky header */
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* IMAGE THUMB */
+.news-thumb {
+  width: 55px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ACTION BUTTONS */
+.news-action-area {
+  display: flex;
+  gap: 8px;
+}
+
+.news-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.news-edit {
+  background: #facc15;
+}
+
+.news-delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+.news-post {
+  background: #4f6df5;
+  color: #fff;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .news-admin-layout {
+    flex-direction: column;
+  }
+
+  .news-admin-form-card,
+  .news-admin-table-card {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* ===== LARGE MOBILE ===== */
+@media (max-width: 768px) {
+  .news-admin-layout {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .news-admin-form-card,
+  .news-admin-table-card {
+    padding: 18px;
+  }
+
+  .news-admin-header h2 {
+    font-size: 22px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  .news-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}

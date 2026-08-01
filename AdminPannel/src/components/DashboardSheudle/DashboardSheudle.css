@@ -1,0 +1,271 @@
+.dash-main-wrapper {
+  padding: 10px;
+  background: #f4f6fa;
+  min-height: 75vh;
+}
+
+.dash-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 24px;
+}
+
+.dash-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.dash-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Project */
+.dash-project-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.dash-project-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dash-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.progress { background: #e6f0ff; color:#3b82f6; }
+.pending { background: #fff4e6; color:#f59e0b; }
+.finished { background: #e6f9f0; color:#10b981; }
+
+/* Header */
+.dash-card-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+  position:relative;
+}
+
+.dash-month-wrapper {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  position:relative;
+}
+
+.dash-month-btn {
+  background:#f1f5f9;
+  border:none;
+  padding:6px 14px;
+  border-radius:6px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.dash-month-menu {
+  position:absolute;
+  top:40px;
+  right:40px;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+  width:150px;
+  z-index:10;
+}
+
+.dash-month-menu div {
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.dash-month-menu div:hover {
+  background:#f3f4f6;
+}
+
+.dash-year {
+  font-weight:500;
+}
+
+/* Dates */
+.dash-date-row {
+  display:flex;
+  gap:18px;
+  margin:15px 0;
+  flex-wrap:wrap;
+}
+
+.dash-date-item {
+  text-align:center;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.dash-date-item span {
+  font-weight:600;
+  display:block;
+}
+
+.dash-date-item small {
+  color:#6b7280;
+}
+
+.dash-date-item.active {
+  background:linear-gradient(135deg,#7c3aed,#8b5cf6);
+  color:white;
+}
+
+/* Events */
+.dash-event-box {
+  background:#f9fafb;
+  border-radius:12px;
+  padding:15px;
+  overflow-y:hidden;
+}
+.dash-card-header {
+  padding-bottom: 14px;
+}
+
+.dash-card-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.dash-card-divider {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.dash-event-item {
+  display:flex;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.dash-left-line {
+  width:4px;
+  border-radius:10px;
+}
+
+.dash-event-content {
+  flex:1;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.dash-event-content h4 {
+  margin:0;
+  font-size:14px;
+}
+
+.dash-event-content p {
+  margin:4px 0 0;
+  font-size:12px;
+  color:#6b7280;
+}
+
+.dash-event-content span {
+  font-size:12px;
+  color:#6b7280;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* Team */
+.dash-table-wrapper {
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.dash-table-wrapper::-webkit-scrollbar {
+  display:none;
+}
+
+.dash-table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:650px;
+}
+
+.dash-table th,
+.dash-table td {
+  padding:14px 8px;
+  text-align:left;
+  font-size:14px;
+}
+
+.dash-member-cell {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.dash-member-cell img {
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.dash-team-dropdown {
+  position:relative;
+  cursor:pointer;
+}
+
+.dash-team-menu {
+  position:absolute;
+  top:30px;
+  right:0;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+  width:140px;
+}
+
+.dash-team-menu div {
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.dash-team-menu div:hover {
+  background:#f3f4f6;
+}
+
+/* Responsive */
+@media (max-width:1200px){
+  .dash-grid-layout{
+    grid-template-columns:1fr;
+  }
+  .dash-card{
+    height:auto;
+  }
+}
+
+@media (max-width:768px){
+  .dash-event-content{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+  }
+}

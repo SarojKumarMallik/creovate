@@ -1,0 +1,231 @@
+/* ROOT → page not scrolling */
+.adminNoticePreview-root{
+  padding:20px;
+  background:#f6f7fb;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+/* SCROLL AREA */
+.adminNoticePreview-scrollArea{
+  flex:1;
+  overflow-y:auto;
+  padding-right:6px;
+}
+
+/* nice scrollbar */
+.adminNoticePreview-scrollArea::-webkit-scrollbar{
+  width:6px;
+}
+.adminNoticePreview-scrollArea::-webkit-scrollbar-thumb{
+  background:#c7d2fe;
+  border-radius:10px;
+}
+
+/* HEADER */
+.adminNoticePreview-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+  flex-shrink:0;
+}
+
+.adminNoticePreview-title{
+  font-size:22px;
+  font-weight:600;
+}
+
+/* TOGGLE */
+.adminNoticePreview-viewToggle{
+  display:flex;
+  background:#fff;
+  border-radius:14px;
+  padding:6px;
+  border:1px solid #e5e7eb;
+  gap:6px;
+}
+
+.adminNoticePreview-viewToggle button{
+  border:none;
+  background:transparent;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.adminNoticePreview-viewToggle button.active{
+  background:linear-gradient(135deg,#ff7a9a,#ff5d73);
+  color:#fff;
+}
+
+/* ================= GRID VIEW ================= */
+
+.adminNoticePreview-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:18px;
+}
+
+/* CARD */
+.adminNoticePreview-card{
+  background:#fff;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.adminNoticePreview-image{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.adminNoticePreview-content{
+  padding:14px;
+}
+
+.adminNoticePreview-desc{
+  font-size:13px;
+  color:#6b7280;
+  margin:6px 0;
+}
+
+.adminNoticePreview-meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* ================= LIST VIEW → TABLE ================= */
+
+.adminNoticePreview-tableWrapper{
+  background:#fff;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  overflow:auto;
+}
+
+/* table */
+.adminNoticePreview-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:700px;
+}
+.adminNoticePreview-menuWrap{
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+
+.adminNoticePreview-moreBtn{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.adminNoticePreview-menuPopup{
+  position:absolute;
+  top:30px;
+  right:0;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  z-index:50;
+  min-width:120px;
+  animation:fadeIn .15s ease;
+}
+
+.adminNoticePreview-menuPopup button{
+  width:100%;
+  border:none;
+  background:#fff;
+  padding:10px 12px;
+  text-align:left;
+  cursor:pointer;
+}
+
+.adminNoticePreview-menuPopup button:hover{
+  background:#f3f4f6;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(-6px);}
+  to{opacity:1; transform:translateY(0);}
+}
+.adminNoticePreview-table th{
+  background:#232834;
+  padding:12px;
+  text-align:left;
+  font-size:13px;
+  font-weight:600;
+}
+
+.adminNoticePreview-table td{
+  padding:12px;
+  border-top:1px solid #eef2f7;
+  font-size:13px;
+}
+
+/* image size REQUIRED */
+.adminNoticePreview-tableImg{
+  width:30px;
+  height:30px;
+  object-fit:cover;
+  border-radius:3px;
+}
+
+/* desc truncate */
+.adminNoticePreview-tableDesc{
+  max-width:260px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* tablet */
+@media(max-width:1024px){
+  .adminNoticePreview-grid{
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  }
+}
+
+/* mobile */
+@media(max-width:640px){
+
+  .adminNoticePreview-root{
+    padding:14px;
+  }
+
+  .adminNoticePreview-title{
+    font-size:18px;
+  }
+
+  .adminNoticePreview-viewToggle button{
+    padding:8px 10px;
+    font-size:16px;
+  }
+
+  .adminNoticePreview-grid{
+    grid-template-columns:1fr;
+  }
+
+  .adminNoticePreview-image{
+    height:150px;
+  }
+
+  /* table scroll on mobile */
+  .adminNoticePreview-table{
+    min-width:600px;
+  }
+}

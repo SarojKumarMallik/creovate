@@ -1,0 +1,183 @@
+/* MAIN WRAPPER */
+
+.careerMng-wrapper{
+display:flex;
+gap:20px;
+padding:20px;
+background:#f1f5f9;
+min-height:100vh;
+align-items:flex-start;
+}
+
+/* FORM SECTION */
+
+.careerMng-formSection{
+width:35%;
+background:#fff;
+border-radius:12px;
+padding:22px;
+border:1px solid #e2e8f0;
+box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* TABLE SECTION */
+
+.careerMng-tableSection{
+width:65%;
+background:#fff;
+border-radius:12px;
+padding:22px;
+border:1px solid #e2e8f0;
+box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* TITLE */
+
+.careerMng-title{
+font-size:20px;
+font-weight:600;
+margin-bottom:18px;
+color:#1e3a8a;
+}
+
+/* FORM */
+
+.careerMng-form{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.careerMng-row{
+display:flex;
+gap:12px;
+}
+
+.careerMng-field{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.careerMng-field label{
+font-size:14px;
+font-weight:500;
+}
+
+.careerMng-field input,
+.careerMng-field select{
+padding:10px;
+border-radius:8px;
+border:1px solid #cbd5e1;
+font-size:14px;
+}
+
+/* BUTTON */
+
+.careerMng-submitBtn{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+margin-top:6px;
+transition:0.2s;
+}
+
+.careerMng-submitBtn:hover{
+background:#1d4ed8;
+}
+
+/* TABLE WRAPPER */
+
+.careerMng-tableWrapper{
+overflow-x:auto;
+margin-top:5px;
+}
+
+/* TABLE */
+
+.careerMng-table{
+width:100%;
+border-collapse:collapse;
+min-width:850px;
+}
+
+.careerMng-table thead{
+background:#2563eb;
+color:#fff;
+}
+
+.careerMng-table th{
+padding:12px;
+text-align:left;
+font-weight:500;
+}
+
+.careerMng-table td{
+padding:12px;
+border-bottom:1px solid #e2e8f0;
+font-size:14px;
+}
+
+/* ROW HOVER */
+
+.careerMng-table tbody tr:hover{
+background:#f8fafc;
+}
+
+/* ACTION BUTTONS */
+
+.careerMng-actionCell{
+display:flex;
+gap:8px;
+}
+
+.careerMng-editBtn{
+background:#e0f2fe;
+border:none;
+padding:6px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.careerMng-deleteBtn{
+background:#fee2e2;
+border:none;
+padding:6px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.careerMng-editBtn:hover{
+background:#bae6fd;
+}
+
+.careerMng-deleteBtn:hover{
+background:#fecaca;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1024px){
+
+.careerMng-wrapper{
+flex-direction:column;
+}
+
+.careerMng-formSection{
+width:100%;
+}
+
+.careerMng-tableSection{
+width:100%;
+}
+
+.careerMng-row{
+flex-direction:column;
+}
+
+}

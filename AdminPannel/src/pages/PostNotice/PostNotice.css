@@ -1,0 +1,292 @@
+.noticepage-wrapper{
+  display:flex;
+  gap:20px;
+  padding:20px;
+  background:#f5f7fb;
+  height:85vh;
+}
+
+/* PANELS */
+
+.noticepage-formPanel,
+.noticepage-tablePanel{
+ 
+  background:#fff;
+  border:1px solid #dbeafe;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  /* overflow:scroll; */
+}
+
+.noticepage-formHeader,
+.noticepage-tableHeader{
+  padding:14px 18px;
+  font-weight:600;
+  border-bottom:1px solid #e0e7ff;
+  background:#404760;
+  color:#fff;
+}
+
+/* FORM */
+
+.noticepage-formBody{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  padding:14px;
+  overflow:auto;
+}
+
+.noticepage-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.noticepage-row-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.noticepage-field label{
+  font-size:13px;
+  margin-bottom:4px;
+  display:block;
+}
+
+.noticepage-field input,
+.noticepage-field select,
+.noticepage-field textarea{
+  width:100%;
+  padding:7px 10px;
+  border-radius:6px;
+  border:1px solid #d1d5db;
+  background:#fff;
+  font-size:13px;
+  transition:.2s;
+}
+
+.noticepage-field input:focus,
+.noticepage-field select:focus,
+.noticepage-field textarea:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,0.15);
+}
+
+.noticepage-submitBtn{
+  background:#2563eb;
+  color:#fff;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+/* TABLE */
+
+.noticepage-tableWrapper{
+  overflow:auto;
+}
+
+.noticepage-tableWrapper::-webkit-scrollbar{
+  display:none;
+}
+
+.noticepage-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.noticepage-table th{
+  background:#2563eb;
+  color:#fff;
+  padding:10px;
+  text-align:left;
+}
+
+.noticepage-table td{
+  padding:10px;
+  border-bottom:1px solid #eef2ff;
+}
+
+.noticepage-thumb{
+  width:22px;
+  height:15px;
+  object-fit:cover;
+  border-radius:3px;
+}
+
+.noticepage-table td:last-child{
+  white-space:nowrap;
+}
+
+/* BUTTONS */
+
+.editBtn{
+  background:#10b981;
+  color:#fff;
+  border:none;
+  padding:5px 8px;
+  margin-right:6px;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.deleteBtn{
+  background:#ef4444;
+  color:#fff;
+  border:none;
+  padding:5px 8px;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* PAGINATION */
+
+.noticepage-pagination{
+  padding:10px;
+  display:flex;
+  gap:6px;
+  justify-content:flex-end;
+  margin-top:auto;
+  border-top:1px solid #eef2ff;
+}
+
+.noticepage-pagination button{
+  padding:6px 12px;
+  border:1px solid #c7d2fe;
+  background:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.noticepage-pagination button:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+.noticepage-pagination .active{
+  background:#2563eb;
+  color:#fff;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+
+/* Large Tablet */
+
+@media(max-width:1200px){
+
+  .noticepage-row{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+  .noticepage-wrapper{
+    flex-direction:column;
+    height:auto;
+  }
+
+  .noticepage-formPanel,
+  .noticepage-tablePanel{
+    width:100%;
+    height:auto;
+    min-height:420px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .noticepage-wrapper{
+    padding:12px;
+    gap:12px;
+  }
+
+  .noticepage-row,
+  .noticepage-row-2{
+    grid-template-columns:1fr;
+  }
+
+  .noticepage-table{
+    min-width:650px;   /* horizontal scroll */
+  }
+
+  .noticepage-submitBtn{
+    margin-top:10px;
+  }
+
+}
+
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+  .noticepage-formHeader,
+  .noticepage-tableHeader{
+    font-size:14px;
+    padding:12px;
+  }
+
+  .noticepage-field input,
+  .noticepage-field select{
+    font-size:12px;
+    padding:7px 8px;
+  }
+
+  .noticepage-pagination{
+    justify-content:center;
+  }
+
+}
+
+
+/* Hide scrollbar mobile */
+
+@media(max-width:768px){
+
+  .noticepage-tableWrapper{
+    overflow:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+
+  .noticepage-tableWrapper::-webkit-scrollbar{
+    display:none;
+  }
+
+}
+
+.editBtn,
+.deleteBtn{
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:4px;
+}
+
+.editBtn:hover{
+  background:#059669;
+}
+
+.deleteBtn:hover{
+  background:#dc2626;
+}
+

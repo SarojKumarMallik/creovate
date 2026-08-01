@@ -1,0 +1,176 @@
+.student-page{
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:25px;
+  padding:30px;
+}
+
+/* LEFT FORM */
+
+.student-form-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.student-form-card h2{
+  margin-bottom:15px;
+}
+
+.student-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.student-form input,
+.student-form select{
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.student-form button{
+  padding:12px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.student-form button:hover{
+  background:#1d4ed8;
+}
+
+/* RIGHT TABLE */
+
+.student-table-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.student-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.student-table th,
+.student-table td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+  text-align:left;
+}
+
+.student-table th{
+  background:#f4f6f9;
+}
+
+.delete-btn{
+  padding:6px 10px;
+  background:#ef4444;
+  border:none;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.delete-btn:hover{
+  background:#dc2626;
+}
+
+.empty-text{
+  color:#777;
+}
+
+.student-page{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:25px;
+  padding:30px;
+}
+
+/* FORM */
+
+.student-form-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.student-form-card h2{
+  margin-bottom:15px;
+}
+
+.student-form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-height:85vh;
+  overflow-y:auto;
+}
+
+.student-form input,
+.student-form select{
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.student-form button{
+  padding:12px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.student-form button:hover{
+  background:#1d4ed8;
+}
+
+/* TABLE */
+
+.student-table-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.student-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.student-table th,
+.student-table td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+}
+
+.student-table th{
+  background:#f3f4f6;
+}
+
+.delete-btn{
+  padding:6px 10px;
+  background:#ef4444;
+  border:none;
+  color:white;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.delete-btn:hover{
+  background:#dc2626;
+}
+
+.empty-text{
+  color:#777;
+}

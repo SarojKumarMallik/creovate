@@ -1,0 +1,92 @@
+.internship-page{
+  display:grid;
+  grid-template-columns:400px 1fr;
+  gap:25px;
+  padding:30px;
+}
+
+/* FORM */
+
+.internship-form-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.internship-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.internship-form input,
+.internship-form select{
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.internship-form button{
+  padding:12px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.internship-form button:hover{
+  background:#1d4ed8;
+}
+
+/* TABLE */
+
+.internship-table-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.internship-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.internship-table th,
+.internship-table td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+}
+
+.internship-table th{
+  background: #1d4ed8;
+}
+
+.action-btns{
+  display:flex;
+  gap:8px;
+}
+
+.edit-btn{
+  background:#22c55e;
+  border:none;
+  color:white;
+  padding:6px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.delete-btn{
+  background:#ef4444;
+  border:none;
+  color:white;
+  padding:6px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.empty-text{
+  color:#777;
+}

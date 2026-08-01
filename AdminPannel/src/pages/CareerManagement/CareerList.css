@@ -1,0 +1,65 @@
+.careerList-wrapper{
+padding:40px;
+background:#f8fafc;
+min-height:100vh;
+}
+
+.careerList-title{
+font-size:28px;
+font-weight:600;
+margin-bottom:20px;
+color:#1e293b;
+}
+
+.careerList-tableWrapper{
+overflow-x:auto;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.careerList-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.careerList-table th{
+background:#0f172a;
+color:white;
+padding:14px;
+font-weight:500;
+text-align:left;
+}
+
+.careerList-table td{
+padding:14px;
+border-bottom:1px solid #e5e7eb;
+}
+
+.careerList-table tr:hover{
+background:#f1f5f9;
+}
+
+/* Publish Button */
+
+.publishBtn{
+background:#16a34a;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+
+/* Unpublish Button */
+
+.unpublishBtn{
+background:#ef4444;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}

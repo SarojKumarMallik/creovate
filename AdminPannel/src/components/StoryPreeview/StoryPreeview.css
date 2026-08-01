@@ -1,0 +1,230 @@
+.story-preview-container {
+  padding: 30px;
+  background: #f9fafb;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* TOGGLE */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.view-toggle svg {
+  cursor: pointer;
+  color: #6b7280;
+  transition: 0.3s;
+}
+
+.view-toggle .active {
+  color: #2563eb;
+  transform: scale(1.2);
+}
+
+/* GRID */
+.premium-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .premium-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .premium-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.premium-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img:first-child {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* EXTRA IMAGE FOR MINDFUL CARD */
+.overlay-image {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* BODY */
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.category {
+  color: #2563eb;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #475569;
+}
+
+.author-block {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.tags {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.tag-chip {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 20px;
+}
+/* TABLE */
+.table-scroll-wrapper {
+  overflow-x: auto;
+}
+
+.premium-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+  background: #341c48;
+}
+
+.premium-table th {
+  background: #e5e7eb13;
+  padding: 12px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.premium-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #e5e7eb;
+  color: black;
+}
+
+.table-img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ACTION */
+.action-td {
+  position: relative;
+}
+
+.action-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.action-dropdown {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  width: 120px;
+  z-index: 10;
+}
+/* ================= PUBLISH TOGGLE BUTTON ================= */
+
+.publish-toggle-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Published State */
+.publish-toggle-btn.published {
+  background: #16a34a;   /* green */
+  color: #ffffff;
+}
+
+.publish-toggle-btn.published:hover {
+  background: #15803d;
+}
+
+/* Draft State */
+.publish-toggle-btn.draft {
+  background: #2563eb;   /* blue */
+  color: #ffffff;
+}
+
+.publish-toggle-btn.draft:hover {
+  background: #1d4ed8;
+}
+
+.action-dropdown button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.action-dropdown button:hover {
+  background: #f1f5f9;
+}
+
+.action-dropdown .delete {
+  color: #dc2626;
+}

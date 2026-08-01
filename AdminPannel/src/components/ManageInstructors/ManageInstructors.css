@@ -1,0 +1,174 @@
+.page-wrapper{
+padding:30px;
+font-family:Segoe UI;
+background:#f4f6fb;
+min-height:100vh;
+}
+
+.page-title{
+font-size:28px;
+margin-bottom:20px;
+font-weight:600;
+}
+
+/* layout */
+
+.layout{
+display:flex;
+gap:25px;
+align-items:flex-start;
+}
+
+/* form */
+
+.form-section{
+width:350px;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:15px;
+}
+
+.form input{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+outline:none;
+font-size:14px;
+}
+
+.form input:focus{
+border-color:#6366f1;
+}
+
+.submit-btn{
+margin-top:10px;
+padding:11px;
+border:none;
+background:#6366f1;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.submit-btn:hover{
+background:#4f46e5;
+}
+
+/* table */
+
+.table-section{
+flex:1;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.table-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+/* search */
+
+.search-box{
+display:flex;
+align-items:center;
+gap:8px;
+border:1px solid #ddd;
+padding:7px 10px;
+border-radius:6px;
+}
+
+.search-box input{
+border:none;
+outline:none;
+}
+
+/* table */
+
+.instructor-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.instructor-table th{
+text-align:left;
+padding:12px;
+background:#0284c7;
+font-size:14px;
+}
+
+.instructor-table td{
+padding:12px;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.instructor-table tr:hover{
+background:#fafafa;
+}
+
+/* avatar */
+
+.avatar{
+width:40px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* action */
+
+.action-cell{
+display:flex;
+gap:10px;
+}
+
+.edit-btn{
+border:none;
+background:#e0f2fe;
+padding:6px;
+border-radius:6px;
+cursor:pointer;
+color:#0284c7;
+}
+
+.delete-btn{
+border:none;
+background:#fee2e2;
+padding:6px;
+border-radius:6px;
+cursor:pointer;
+color:#dc2626;
+}
+
+.form textarea{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+outline:none;
+font-size:14px;
+resize:vertical;
+min-height:70px;
+}
+
+.preview-img{
+width:80px;
+height:80px;
+border-radius:8px;
+object-fit:cover;
+margin-top:5px;
+border:1px solid #ddd;
+}

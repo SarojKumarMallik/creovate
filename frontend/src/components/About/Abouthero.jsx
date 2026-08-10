@@ -232,7 +232,7 @@ Our mission is to deliver innovative, scalable, and result-driven technology sol
                     SKM
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Saroj Kumar Mallik</p>
+                    <p className="text-sm font-semibold text-gray-900">Soumya Ranjan</p>
                       <p className="text-xs text-gray-500">Founder & CEO, Creovate Technologies</p>
                   </div>
                 </div>

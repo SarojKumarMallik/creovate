@@ -32,7 +32,8 @@ import {
 import "./DashboardCard.css";
 
 // API URL
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
 
 interface BlogStats {
   total: number;
@@ -369,7 +370,7 @@ const Dashboard: React.FC = () => {
                     <div className="recent-item-left">
                       {blog.image && (
                         <img 
-                          src={`http://localhost:5000${blog.image}`} 
+                          src={blog.image.startsWith('http') ? blog.image : `${BASE_URL}${blog.image.startsWith('/') ? blog.image : `/${blog.image}`}`} 
                           alt={blog.title}
                           className="recent-item-image"
                           onError={(e) => {

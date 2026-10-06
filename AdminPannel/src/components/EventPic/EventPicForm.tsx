@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { getImageUrl } from "../../api/api";
 
 interface Props{
   onSubmit:(file:File)=>void;
@@ -12,7 +13,7 @@ const EventPicForm:React.FC<Props> = ({onSubmit,editItem}) => {
 
   useEffect(()=>{
     if(editItem){
-      setPreview(`http://localhost:5000/uploads/${editItem.image}`);
+      setPreview(getImageUrl(`uploads/${editItem.image}`));
     }
   },[editItem]);
 

@@ -27,7 +27,8 @@ interface Student {
 
 const ManageStudent: React.FC = () => {
 
-  const API = "http://localhost:5000/api";
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
 
   const [students, setStudents] = useState<Student[]>([]);
   const [filtered, setFiltered] = useState<Student[]>([]);
@@ -235,7 +236,7 @@ const ManageStudent: React.FC = () => {
                   <td style={td}>
                     {student.resume ? (
                       <a
-                        href={`http://localhost:5000/${student.resume}`}
+                        href={`${BASE_URL}/${student.resume.startsWith('/') ? student.resume.substring(1) : student.resume}`}
                         target="_blank"
                         rel="noreferrer"
                         style={resumeBtn}

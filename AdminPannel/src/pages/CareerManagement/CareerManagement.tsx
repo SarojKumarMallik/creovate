@@ -30,7 +30,8 @@ const CareerManagement: React.FC = () => {
   const [list, setList] = useState<Career[]>([]);
   const [editIndex, setEditIndex] = useState<number | null>(null);
 
-  const API = "http://localhost:5000/api/career";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  const API = `${API_URL}/career`;
 
   /* ================= FETCH CAREERS ================= */
 

@@ -16,12 +16,35 @@ services:
       - "8087:80"
     restart: unless-stopped
 
+  mongodb:
+    image: mongo:8
+    container_name: creovate_mongodb
+    restart: unless-stopped
+    volumes:
+      - creovate_mongodb_data:/data/db
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh --quiet --eval \"db.adminCommand({ ping: 1 }).ok\""
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
   backend:
     build:
       context: ./backend
     container_name: creovate_backend
     ports:
-      - "5005:5005"
+      - "5005:5000"
     env_file:
-      - .env
+      - ./backend/.env
+    depends_on:
+      mongodb:
+        condition: service_healthy
     restart: unless-stopped
+
+volumes:
+  creovate_mongodb_data:

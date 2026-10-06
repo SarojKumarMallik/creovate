@@ -12,11 +12,9 @@ import {
 } from "lucide-react";
 
 // API URL
-// const API_URL = 'http://localhost:5000/api';
-// const BASE_URL = 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL || '/api';
+const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
 
-const API_URL = 'https://api.creovatetechnologies.in/api';
-const BASE_URL = 'https://api.creovatetechnologies.in';
 
 
 

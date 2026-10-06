@@ -20,7 +20,9 @@ const ManageInstructor = () => {
   const [instructors, setInstructors] = useState<Instructor[]>([]);
   const [search, setSearch] = useState("");
 
-  const API = "http://localhost:5000/api/instructors";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
+  const API = `${API_URL}/instructors`;
 
   /* ================= FETCH DATA ================= */
 
@@ -102,7 +104,7 @@ const ManageInstructor = () => {
               <div className="card-header">
 
                 <img
-                  src={`http://localhost:5000/uploads/${ins.avatar}`}
+                  src={`${BASE_URL}/uploads/${ins.avatar}`}
                   alt=""
                   className="avatar"
                 />
@@ -157,7 +159,7 @@ const ManageInstructor = () => {
                 <td className="list-instructor">
 
                   <img
-                    src={`http://localhost:5000/uploads/${ins.avatar}`}
+                    src={`${BASE_URL}/uploads/${ins.avatar}`}
                     className="avatar"
                     alt=""
                   />

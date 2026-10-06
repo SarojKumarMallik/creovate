@@ -23,7 +23,8 @@ interface Application {
 
 const AdminApplications: React.FC = () => {
 
-  const API = "http://localhost:5000/api";
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
 
   const [applications, setApplications] = useState<Application[]>([]);
   const [filtered, setFiltered] = useState<Application[]>([]);
@@ -243,7 +244,7 @@ const AdminApplications: React.FC = () => {
                     {app.resume ? (
 
                       <a
-                        href={`http://localhost:5000/${app.resume}`}
+                        href={`${BASE_URL}/${app.resume.startsWith('/') ? app.resume.substring(1) : app.resume}`}
                         target="_blank"
                         rel="noreferrer"
                         style={resumeBtn}

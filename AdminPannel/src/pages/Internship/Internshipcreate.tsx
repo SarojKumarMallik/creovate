@@ -29,9 +29,10 @@ interface Instructor {
   name: string;
 }
 
-const API = "http://localhost:5000/api/internships";
-const CATEGORY_API = "http://localhost:5000/api/categories";
-const INSTRUCTOR_API = "http://localhost:5000/api/instructors";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API = `${API_URL}/internships`;
+const CATEGORY_API = `${API_URL}/categories`;
+const INSTRUCTOR_API = `${API_URL}/instructors`;
 
 const Internshipcreate: React.FC = () => {
 

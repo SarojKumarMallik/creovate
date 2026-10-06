@@ -17,7 +17,9 @@ interface Props {
   notices?: NoticePreviewType[];
 }
 
-const API = "http://localhost:5000/api/notices";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
+const API = `${API_URL}/notices`;
 
 /* fallback */
 const dummy: NoticePreviewType[] = [
@@ -110,7 +112,7 @@ const NoticePreview: React.FC<Props> = ({ notices }) => {
                 {n.image && (
 
                   <img
-                    src={`http://localhost:5000/uploads/notices/${n.image}`}
+                    src={`${BASE_URL}/uploads/notices/${n.image}`}
                     className="adminNoticePreview-image"
                   />
 
@@ -179,7 +181,7 @@ const NoticePreview: React.FC<Props> = ({ notices }) => {
                       {n.image && (
 
                         <img
-                          src={`http://localhost:5000/uploads/notices/${n.image}`}
+                          src={`${BASE_URL}/uploads/notices/${n.image}`}
                           className="adminNoticePreview-tableImg"
                         />
 

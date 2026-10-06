@@ -36,8 +36,10 @@ const ManageInstructors: React.FC = () => {
   const [instructors, setInstructors] = useState<Instructor[]>([]);
   const [editId, setEditId] = useState<string | null>(null);
 
-  const API = "http://localhost:5000/api/instructors";
-  const CATEGORY_API = "http://localhost:5000/api/categories";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  const BASE_URL = import.meta.env.VITE_BASE_URL || (import.meta.env.VITE_API_URL?.startsWith('http') ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : '');
+  const API = `${API_URL}/instructors`;
+  const CATEGORY_API = `${API_URL}/categories`;
 
   /* ================= FETCH INSTRUCTORS ================= */
 
@@ -137,7 +139,7 @@ const ManageInstructors: React.FC = () => {
     setFormData(ins);
 
     if (ins.avatar) {
-      setPreview(`http://localhost:5000/uploads/${ins.avatar}`);
+      setPreview(`${BASE_URL}/uploads/${ins.avatar}`);
     }
 
     setEditId(ins._id || null);
@@ -269,7 +271,7 @@ const ManageInstructors: React.FC = () => {
                   <td>
                     {ins.avatar && (
                       <img
-                        src={`http://localhost:5000/uploads/${ins.avatar}`}
+                        src={`${BASE_URL}/uploads/${ins.avatar}`}
                         className="avatar"
                         alt=""
                       />

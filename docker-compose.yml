@@ -5,7 +5,7 @@ services:
       context: ./frontend
     container_name: creovate_frontend
     ports:
-      - "8086:80"
+      - "8089:80"
     restart: unless-stopped
 
   admin:
@@ -13,7 +13,7 @@ services:
       context: ./AdminPannel
     container_name: creovate_admin
     ports:
-      - "8087:80"
+      - "8088:80"
     restart: unless-stopped
 
   mongodb:
@@ -38,7 +38,7 @@ services:
       context: ./backend
     container_name: creovate_backend
     ports:
-      - "5005:5000"
+      - "5007:5000"
     env_file:
       - ./backend/.env
     depends_on:

@@ -6,6 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import loaderAnimation from "./assets/lottie/loader.json";
 import Footer from "./components/Footer";
 import Floatingcontact from "./components/Floatingcontact/Floatingcontact.jsx";
+import Chatbot from "./components/Chatbot/Chatbot.jsx";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
@@ -61,6 +62,7 @@ function App() {
       {/* <ContactCTA /> */}
       <Footer />
       <Floatingcontact />
+      <Chatbot />
     </Router>
   );
 }

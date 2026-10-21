@@ -10,6 +10,7 @@ import fs from "fs";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -59,6 +60,9 @@ app.use("/api/blogs", blogRoutes);
 
 // Upload Routes
 app.use("/api", uploadRoutes);
+
+// AI Chatbot Routes
+app.use("/api/chat", chatRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
